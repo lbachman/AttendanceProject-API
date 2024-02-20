@@ -106,7 +106,7 @@ namespace AttendanceAPI
 
         /// <summary>
         /// Get a user level by key (GUID)
-        /// returns a single User object or a null User
+        /// returns the users access level
         /// </summary>
         /// <param name="key"></param>
         /// <returns>UserLevelDTO</returns>
@@ -163,64 +163,56 @@ namespace AttendanceAPI
         } // end function GetUserLevelByKey
 
         /// <summary>
-        /// Gets an Student in the database by Student ID and returns an StudentDTO or null
+        /// Gets an Student in the database by student guid and returns an StudentDTO or null
         /// </summary>
         /// <param>Id</param>
         /// <returns>StudentDTO</returns>
         /// <exception cref="Exception"></exception>
-        //public StudentDTO? GetStudentById(int Id)
-        //{
-        //    StudentDTO? StudentDTO = null;
+        public StudentDTO? GetStudentByGuid(string guid)
+        {
+            StudentDTO? StudentDTO = null;
 
-        //    try
-        //    {
+            try
+            {
 
-        //        //using guarentees the release of resources at the end of scope 
-        //        using SqlConnection conn = new(connectionString);
+                //using guarentees the release of resources at the end of scope 
+                using SqlConnection conn = new(connectionString);
 
-        //        // open the database connection
-        //        conn.Open();
+                // open the database connection
+                conn.Open();
 
-        //        // create a command object identifying the stored procedure
-        //        using SqlCommand cmd = new SqlCommand("spGetAnStudent", conn);
+                // create a command object identifying the stored procedure
+                using SqlCommand cmd = new SqlCommand("spGetAnStudent", conn);
 
-        //        // set the command object so it knows to execute a stored procedure
-        //        cmd.CommandType = CommandType.StoredProcedure;
+                // set the command object so it knows to execute a stored procedure
+                cmd.CommandType = CommandType.StoredProcedure;
 
-        //        // add parameters to command, which will be passed to the stored procedure
-        //        cmd.Parameters.Add(new SqlParameter("@Id", Id));
+                // add parameters to command, which will be passed to the stored procedure
+                cmd.Parameters.Add(new SqlParameter("@Guid", guid));
 
-        //        // execute the command which returns a data reader object
-        //        // usually we should use ExecuteReaderAsync() but for this example we will use ExecuteReader()
-        //        using SqlDataReader rdr = (SqlDataReader)cmd.ExecuteReader();
+                // execute the command which returns a data reader object
+                // usually we should use ExecuteReaderAsync() but for this example we will use ExecuteReader()
+                using SqlDataReader rdr = (SqlDataReader)cmd.ExecuteReader();
 
-        //        // if the reader contains a data set, convert to Student objects
-        //        if (rdr.Read())
-        //        {
-        //            //Student is null so create a new instance
-        //            StudentDTO = new StudentDTO();
+                // if the reader contains a data set, convert to Student objects
+                if (rdr.Read())
+                {
+                    //Student is null so create a new instance
+                    StudentDTO = new StudentDTO();
 
-        //            StudentDTO.Title = (string)rdr.GetValue(2);
-        //            StudentDTO.UserComment = (string)rdr.GetValue(3);
-        //            StudentDTO.StudentUrl = (string)rdr.GetValue(4);
+                    StudentDTO.Guid = (string)rdr.GetValue(0);
+                    StudentDTO.UserName = (string)rdr.GetValue(1);                  
+                }
+            }
+            catch (Exception)
+            {
+                //rethrow exception
+                throw;
+            }
+            //check for Students length to be zero after returned from database
+            return StudentDTO;
 
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        //normally we would write to a log here
-        //        //rethrow exception
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        // no clean up because the 'using' statements guarantees closing resources
-        //    }
-
-        //    //check for Students length to be zero after returned from database
-        //    return StudentDTO;
-
-        //} // end function GetStudentById
+        } // end function GetStudentById
 
         /// <summary>
         /// Insert an Student into the database and return the Student with the new ID

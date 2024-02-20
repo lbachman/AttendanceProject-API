@@ -4,7 +4,7 @@
 
 ## Overview
 
-This API provides CRUD (Create, Read, Update, Delete) operations to manage attendance data efficiently. It serves as the backend logic for an attendance database system, enabling easy manipulation and retrieval of attendance records.
+This API provides CRUD (Create, Read, Update, Delete) operations to manage attendance data. It serves as the backend logic for an attendance database system, enabling easy manipulation and retrieval of attendance records.
 
 ## Endpoints
 
@@ -13,7 +13,12 @@ This API provides CRUD (Create, Read, Update, Delete) operations to manage atten
    - **Description:** gets list of all students.
    - **Response:** Returns list of students.
 
-2. **Post a Student**
+2. **Get Student By Guid**
+   - **Endpoint:** `GET / https://localhost:7001/api/v1/AttendanceAPI/all/{key}`
+   - **Description:** gets a student by guid.
+   - **Response:** Returns student object or null.  
+
+3. **Post a Student**
    - **Endpoint:** `POST / https://localhost:7001/api/v1/AttendanceAPI/{key}`
    - **Description:** add a single student object.
    - **Request Body:** JSON containing student details.

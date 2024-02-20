@@ -49,6 +49,16 @@ namespace AttendanceAPI.Controllers
 
         }
 
+        /// <summary>
+        /// Gets student info by guid 
+        /// </summary>
+        /// <param name="guid"></param>
+        [HttpGet("{key}")]
+        public void GetStudentByGuid(string guid)
+        {
+            // implement here
+            
+        }
 
         /// <summary>
         /// POST request to add a single student with admin or instructor key
