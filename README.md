@@ -11,7 +11,7 @@ This API provides CRUD (Create, Read, Update, Delete) operations to manage atten
 1. **Get Students**
    - **Endpoint:** `GET / https://localhost:7001/api/v1/AttendanceAPI/all/{key}`
    - **Description:** gets list of all students.
-   - **Response:** Returns the created attendance record.
+   - **Response:** Returns list of students.
 
 2. **Post a Student**
    - **Endpoint:** `POST / https://localhost:7001/api/v1/AttendanceAPI/{key}`
