@@ -59,9 +59,9 @@ namespace AttendanceAPI
         /// <param>None</param>
         /// <returns>List of Students</returns>
         /// <exception cref="Exception"></exception>
-        public List<StudentDTO> GetStudents()
+        public List<UserDTO> GetStudents()
         {
-            List<StudentDTO> Students = new();
+            List<UserDTO> Students = new();
 
             try
             {
@@ -85,7 +85,7 @@ namespace AttendanceAPI
                 // if the reader contains a data set, convert to Student objects
                 while (rdr.Read())
                 {
-                    StudentDTO Student = new StudentDTO();
+                    UserDTO Student = new UserDTO();
 
                     Student.Guid = (string)rdr.GetValue(2);
                     Student.UserName = (string)rdr.GetValue(1);
@@ -168,9 +168,9 @@ namespace AttendanceAPI
         /// <param>Id</param>
         /// <returns>StudentDTO</returns>
         /// <exception cref="Exception"></exception>
-        public StudentDTO? GetStudentByGuid(string guid)
+        public UserDTO? GetStudentByGuid(string guid)
         {
-            StudentDTO? StudentDTO = null;
+            UserDTO? StudentDTO = null;
 
             try
             {
@@ -198,7 +198,7 @@ namespace AttendanceAPI
                 if (rdr.Read())
                 {
                     //Student is null so create a new instance
-                    StudentDTO = new StudentDTO();
+                    StudentDTO = new UserDTO();
 
                     StudentDTO.Guid = (string)rdr.GetValue(0);
                     StudentDTO.UserName = (string)rdr.GetValue(1);                  
@@ -221,10 +221,10 @@ namespace AttendanceAPI
         /// <returns>Student</returns>
         /// <exception cref="Exception"></exception>
         /// <exception cref="ArgumentNullException"></exception>"
-        public StudentDTO? InsertStudent(StudentDTO Student)
+        public UserDTO? InsertStudent(UserDTO Student)
         {
 
-            StudentDTO? tempStudent = null;
+            UserDTO? tempStudent = null;
             try
             {
                 if (Student == null)
@@ -261,7 +261,7 @@ namespace AttendanceAPI
                 if (count > 0)
                 {
                     //Student is null so create a new instance
-                    tempStudent = new StudentDTO();
+                    tempStudent = new UserDTO();
 
                     tempStudent.UserName = (string)IdValue.Value;
                 }
@@ -286,7 +286,7 @@ namespace AttendanceAPI
         /// <param>Id, StudentDTO</param>
         /// <returns>int</returns>
         /// <exception cref="Exception"></exception>
-        public int UpdateStudent(int Id, StudentDTO StudentDTO)
+        public int UpdateStudent(int Id, UserDTO StudentDTO)
         {
             int count;
 

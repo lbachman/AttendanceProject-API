@@ -16,7 +16,7 @@ namespace AttendanceAPI.Controllers
         // https://localhost:7001/api/v1/AttendanceAPI/all/{key}
         // possibly write this as a post and take guid  from body
         [HttpGet("all/{key}")]
-        public ActionResult<List<StudentDTO?>> GetStudents(string guid)
+        public ActionResult<List<UserDTO?>> GetStudents(string guid)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace AttendanceAPI.Controllers
                     return Unauthorized($"{guid} is unauthorized to access the database");
                 }
 
-                List<StudentDTO> students = dl.GetStudents();
+                List<UserDTO> students = dl.GetStudents();
                 if (students == null)
                 {
                     return NotFound("No students found");
@@ -67,7 +67,7 @@ namespace AttendanceAPI.Controllers
         /// <param name="key"></param>
         /// <returns></returns>
         [HttpPost("{key}")]
-        public ActionResult<StudentDTO> PostAStudent([FromBody] StudentDTO studentDTO, string key)
+        public ActionResult<UserDTO> PostAStudent([FromBody] UserDTO studentDTO, string key)
         {
             try
             {
@@ -81,13 +81,13 @@ namespace AttendanceAPI.Controllers
                 {
                     return Unauthorized($"{key} is unauthorized to access the database"); //status 401;
                 }
-                StudentDTO tempStudent = new StudentDTO()
+                UserDTO tempStudent = new UserDTO()
                 {
                     Guid = studentDTO.Guid,
                     UserName = studentDTO.UserName
                 };
                 //return the article or null
-                StudentDTO? student = dl.InsertStudent(tempStudent);
+                UserDTO? student = dl.InsertStudent(tempStudent);
                 if (student == null)
                 {
                     return new StatusCodeResult(StatusCodes.Status500InternalServerError); //StatusCode(500);
