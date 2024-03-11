@@ -1,5 +1,5 @@
 using AttendanceProjectAPI_v2.Data;
-using AttendanceProjectAPI_v2.Entites;
+using AttendanceProjectAPI_v2.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

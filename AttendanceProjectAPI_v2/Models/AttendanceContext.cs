@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace AttendanceProjectAPI_v2.Entites;
+namespace AttendanceProjectAPI_v2.Models;
 
 public partial class AttendanceContext : DbContext
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AttendanceProjectAPI_v2.Entites;
+namespace AttendanceProjectAPI_v2.Models;
 
 public partial class UserLevel
 {

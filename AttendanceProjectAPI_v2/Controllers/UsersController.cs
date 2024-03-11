@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using AttendanceProjectAPI_v2.Entites;
+using AttendanceProjectAPI_v2.Models;
 
 namespace AttendanceEntityAPI.Controllers
 {

@@ -3,8 +3,8 @@
 
 # Requirements 
 - Microsoft.EntityFrameworkCore
-- Microsoft.EntityFrameworkCore.Tools `Install-Package Microsoft.EntityFrameworkCore.Tools`
-- MySql.EntityFrameworkCore `Install-Package MySql.EntityFrameworkCore -Version 7.0.2` edit this to use latest version
+- Microsoft.EntityFrameworkCore.Tools
+- MySql.EntityFrameworkCore 
 
 
 # Links
@@ -17,15 +17,13 @@
 
 ## Commands
 
-- Build controller: `dotnet ef dbcontext scaffold "connection-string" MySql.EntityFrameworkCore -o sakila -f`
 - *Ensure that you are in the project directory when loading the package manager console*
 - *If you are using a connector version earlier than Connector/NET 8.0.23, replace MySql.EntityFrameworkCore with MySql.Data.EntityFrameworkCore*
-- *Ensure that you only have one MySQL package installed with NuGet*
 - `Get-Package` list out installed packages in the package manager console.
 
 
 # Database 
-Ensure that this code is in the `Program.cs` file
+Ensure that this code is in the `Program.cs` or `Startup.cs` file
 ```csharp
 // Add services to the container.
 builder.Services.AddControllers();
@@ -46,20 +44,8 @@ Ensure that this code is in the `appsettings.json` folder
 - `Server=127.0.0.1;Port=3306;User=root;Database=attendance;Pwd=Basscrunch@808;`
 - `Server=127.0.0.1;Port=3306;User=root;Database=attendance;Pwd=110494;`
 
-
-
 ## Add Controller
 1. Right-click controller folder
 2. Click new scaffold item
 3. Click MVC controller with views using Entity Framework or API with read/write endpoints, using Entity Framework
 4. Pick a model class 
-
-
-
-## Project File
-Add this to the `.csproj` file
-```xml
-<ItemGroup>
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="x.x.x" />
-</ItemGroup>
-```
