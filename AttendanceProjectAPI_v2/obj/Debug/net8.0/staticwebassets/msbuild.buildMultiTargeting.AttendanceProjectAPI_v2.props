@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AttendanceProjectAPI_v2.props" />
+</Project>
