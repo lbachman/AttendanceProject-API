@@ -20,6 +20,7 @@
 - *Ensure that you are in the project directory when loading the package manager console*
 - *If you are using a connector version earlier than Connector/NET 8.0.23, replace MySql.EntityFrameworkCore with MySql.Data.EntityFrameworkCore*
 - `Get-Package` list out installed packages in the package manager console.
+- `Update-Database` applys migrations to instalize a database
 
 
 # Database 
@@ -49,3 +50,8 @@ Ensure that this code is in the `appsettings.json` folder
 2. Click new scaffold item
 3. Click MVC controller with views using Entity Framework or API with read/write endpoints, using Entity Framework
 4. Pick a model class 
+
+## Setting Up Identity Framework
+- When creating project, select authenticate individual user accounts
+- Official Docs: https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&tabs=visual-studio
+- 

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AttendanceProjectAPI_v2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52553e8f34b2abb65967225d41b8581ef4ccc305")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04d1ea14dfa24176b72b86401bdb4c0904ff739f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AttendanceProjectAPI_v2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AttendanceProjectAPI_v2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
