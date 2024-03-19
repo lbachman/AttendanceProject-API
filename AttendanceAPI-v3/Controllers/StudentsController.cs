@@ -110,6 +110,35 @@ namespace AttendanceAPI_v3.Controllers
             return CreatedAtAction("GetStudent", new { id = student.StudentUuid }, student);
         }
 
+        // POST: api/Students/AddBatch
+        [HttpPost("AddBatch")]
+        public async Task<ActionResult<IEnumerable<Student>>> PostStudentBatch(IEnumerable<Student> students)
+        {
+            if (students == null || !students.Any())
+            {
+                return BadRequest("No students provided.");
+            }
+
+            foreach (var student in students)
+            {
+                _context.Students.Add(student);
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                return Conflict("One or more students already exist.");
+            }
+
+            return CreatedAtAction("GetStudent", students);
+        }
+
+
+
+
         // DELETE: api/Students/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(string id)
