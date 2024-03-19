@@ -2,6 +2,7 @@ using AttendanceAPI_v3.AttendanceModels;
 using AttendanceAPI_v3.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
 
 namespace AttendanceAPI_v3
@@ -13,7 +14,7 @@ namespace AttendanceAPI_v3
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            var builder = WebApplication.CreateBuilder(args);            
 
             // Registers DbContext for  authorization database
             var connectionString = builder.Configuration.GetConnectionString("AuthorizationConnection") ?? throw new InvalidOperationException("Connection string 'AuthorizationConnection' not found.");
