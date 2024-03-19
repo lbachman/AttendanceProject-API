@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vAF8x8tDCFJgIr0M8ajJJdWaF+BdSqLIm8EbdgreMZA=",
+  "Hash": "ResN9nOumZh0gbsFhGjBT/Z1kX84NPakiJgdj1kyEr8=",
   "Source": "AttendanceAPI-v3",
   "BasePath": "_content/AttendanceAPI-v3",
   "Mode": "Default",
@@ -47,10 +47,10 @@
       "OriginalItemSpec": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\14239\\Desktop\\AttendanceAPI-v3\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css",
+      "Identity": "C:\\Users\\14239\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css",
       "SourceId": "AttendanceAPI-v3",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\14239\\Desktop\\AttendanceAPI-v3\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\14239\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/AttendanceAPI-v3",
       "RelativePath": "AttendanceAPI-v3.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\14239\\Desktop\\AttendanceAPI-v3\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css"
+      "OriginalItemSpec": "C:\\Users\\14239\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css"
     }
   ]
 }
