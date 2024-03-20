@@ -88,3 +88,5 @@ Ensure that this code is in the `appsettings.json` folder
     - add ApplicationUser class
         - extend identity user object `public class ApplicationUser : IdentityUser`
         - add `using Microsoft.AspNetCore.Identity;`
+
+3. run this when switching machines to update the database `Update-Database -Context ApplicationDbContext`

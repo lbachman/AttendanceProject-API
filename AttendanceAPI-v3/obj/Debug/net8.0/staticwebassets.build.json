@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ResN9nOumZh0gbsFhGjBT/Z1kX84NPakiJgdj1kyEr8=",
+  "Hash": "aIx7qe9aiNsSq1CAqNe8MFA+S00rzCqj+2yvPPoxJ7M=",
   "Source": "AttendanceAPI-v3",
   "BasePath": "_content/AttendanceAPI-v3",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\lbachman\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\lbachman\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -25,13 +25,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\lbachman\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\lbachman\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\lbachman\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -44,13 +44,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\14239\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\lbachman\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.3\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\14239\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css",
+      "Identity": "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css",
       "SourceId": "AttendanceAPI-v3",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\14239\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/AttendanceAPI-v3",
       "RelativePath": "AttendanceAPI-v3.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\14239\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css"
+      "OriginalItemSpec": "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\AttendanceAPI-v3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AttendanceAPI-v3.styles.css"
     }
   ]
 }

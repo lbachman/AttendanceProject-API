@@ -26,7 +26,7 @@ namespace AttendanceAPI_v3.Controllers
         {
             return await _context.Classes.ToListAsync();
         }
-
+  
         // GET: api/Classes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Class>> GetClass(uint id)
