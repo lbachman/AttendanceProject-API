@@ -1,0 +1,18 @@
+﻿If you login and are admin, it will send you to the admin home page.
+	- add classes
+	- add instructors
+	- anything an instructor can do.
+	- anything others can do.  
+	- other admin stuff 
+
+If you login and are instructor, it will send you to the instructor page.
+	- add students
+	- anything others can do.
+
+# *Instructor for class must exist before adding a class.*
+
+# Instructurs can mess with attendance of all classes. we can trust instructors.
+
+# get all instructors - currently no way to disern who is instructer or student in "user" model
+
+# how do we get students using identity framework
