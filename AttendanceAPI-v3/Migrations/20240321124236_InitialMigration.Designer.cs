@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AttendanceAPI_v3.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240321010244_InitialMigration")]
+    [Migration("20240321124236_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

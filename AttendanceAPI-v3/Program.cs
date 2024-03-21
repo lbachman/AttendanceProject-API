@@ -86,7 +86,7 @@ namespace AttendanceAPI_v3
                 }
             }
 
-            // seeding the users
+            // seeding the admin user
             using (var scope = app.Services.CreateScope())
             {
                 var userManager =
