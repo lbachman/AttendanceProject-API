@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AttendanceAPI_v3.AttendanceModels;
+using AttendanceAPI_v3.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace AttendanceAPI_v3.Controllers
 {
@@ -21,10 +25,7 @@ namespace AttendanceAPI_v3.Controllers
         }
 
         // GET: api/Students
-        /// <summary>
-        /// Gets all students
-        /// </summary>
-        /// <returns>a list of student objects</returns>
+        [Authorize(Roles = "Instructor, Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace AttendanceAPI_v3.Data
 {
@@ -14,7 +15,8 @@ namespace AttendanceAPI_v3.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // customize database settings here. 
+            // customize database settings here.
+            builder.HasDefaultSchema("Authentication");
         }
 
     }

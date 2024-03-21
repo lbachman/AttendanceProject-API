@@ -27,6 +27,7 @@
 - `Get-Package` list out installed packages in the package manager console.
 - `Add-Migration {add migration name here}` 
 - `Update-Database` applys migrations to instalize a database
+- `Remove-Migration -context {context name}` removes migration
 
 
 ## Database 
