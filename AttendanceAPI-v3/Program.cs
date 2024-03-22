@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using AttendanceAPI_v3.AuthenticationModels;
+using System.Configuration;
 
 namespace AttendanceAPI_v3
 {
@@ -28,6 +30,14 @@ namespace AttendanceAPI_v3
             {
                 options.UseMySQL(attendanceConnectionString);
             });
+
+
+            // Register DbContext for AuthenticationContext
+            builder.Services.AddDbContext<AuthenticationContext>(options =>
+            {
+                options.UseSqlServer("AuthenticationConnection");
+            });
+
 
             builder.Services.AddAuthorization();
             // creates idenity endpoints
