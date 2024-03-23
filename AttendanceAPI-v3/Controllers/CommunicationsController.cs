@@ -20,12 +20,16 @@ namespace AttendanceAPI_v3.Controllers
             _context = context;
         }
 
+
+
         // GET: api/Communications
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Communication>>> GetCommunications()
         {
             return await _context.Communications.ToListAsync();
         }
+
+
 
         // GET: api/Communications/5
         [HttpGet("{id}")]
@@ -40,6 +44,8 @@ namespace AttendanceAPI_v3.Controllers
 
             return communication;
         }
+
+
 
         // PUT: api/Communications/5
         [HttpPut("{id}")]
@@ -71,6 +77,8 @@ namespace AttendanceAPI_v3.Controllers
             return NoContent();
         }
 
+
+
         // POST: api/Communications
         [HttpPost]
         public async Task<ActionResult<Communication>> PostCommunication(Communication communication)
@@ -80,6 +88,8 @@ namespace AttendanceAPI_v3.Controllers
 
             return CreatedAtAction("GetCommunication", new { id = communication.ComId }, communication);
         }
+
+
 
         // DELETE: api/Communications/5
         [HttpDelete("{id}")]
@@ -96,6 +106,8 @@ namespace AttendanceAPI_v3.Controllers
 
             return NoContent();
         }
+
+
 
         private bool CommunicationExists(uint id)
         {

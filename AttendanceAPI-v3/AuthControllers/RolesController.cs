@@ -26,8 +26,10 @@ namespace AttendanceAPI_v3.AuthControllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
+
+
         // add instructor role
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost("add-instuctor")]
         public async Task<IActionResult> AddRoleToUser(string userEmail)
         {
@@ -52,6 +54,9 @@ namespace AttendanceAPI_v3.AuthControllers
 
             return BadRequest(result.Errors);
         }
+
+
+
 
        
     }

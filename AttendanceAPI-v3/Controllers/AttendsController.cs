@@ -20,6 +20,11 @@ namespace AttendanceAPI_v3.Controllers
             _context = context;
         }
 
+
+        /// <summary>
+        /// get all attendance records
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Attends
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Attend>>> GetAttends()
@@ -27,19 +32,57 @@ namespace AttendanceAPI_v3.Controllers
             return await _context.Attends.ToListAsync();
         }
 
-        // GET: api/Attends/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Attend>> GetAttend(string id)
-        {
-            var attend = await _context.Attends.FindAsync(id);
 
-            if (attend == null)
+
+        /// <summary>
+        /// get attendance by student id
+        /// </summary>
+        /// <param name="studentUuid"></param>
+        /// <returns></returns>
+        // GET: api/Attends/ByStudent/{studentUuid}
+        [HttpGet("by-id/{studentUuid}")]
+        public async Task<ActionResult<IEnumerable<Attend>>> GetStudentAttendance(string studentUuid)
+        {
+            var attends = await _context.Attends
+                .Where(a => a.StudentUuid == studentUuid)
+                .ToListAsync();
+
+            if (attends == null)
             {
                 return NotFound();
             }
 
-            return attend;
+            return attends;
         }
+
+
+
+        /// <summary>
+        /// gets all attendance records for a class by class id
+        /// </summary>
+        /// <param name="classId"></param>
+        /// <returns></returns>
+        // GET: api/Attends/ByStudent/{studentUuid}
+        [HttpGet("class-id/{classId}")]
+        public async Task<ActionResult<IEnumerable<Attend>>> GetClassAttendance(uint classId)
+        {
+            var attends = await _context.Attends
+                .Where(a => a.ClassId == classId)
+                .ToListAsync();
+
+            if (attends == null)
+            {
+                return NotFound();
+            }
+
+            return attends;
+        }
+
+
+
+
+
+
 
         // PUT: api/Attends/5
         [HttpPut("{id}")]
@@ -71,6 +114,8 @@ namespace AttendanceAPI_v3.Controllers
             return NoContent();
         }
 
+
+
         // POST: api/Attends
         [HttpPost]
         public async Task<ActionResult<Attend>> PostAttend(Attend attend)
@@ -94,6 +139,8 @@ namespace AttendanceAPI_v3.Controllers
 
             return CreatedAtAction("GetAttend", new { id = attend.StudentUuid }, attend);
         }
+
+
 
         // DELETE: api/Attends/5
         [HttpDelete("{id}")]

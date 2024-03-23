@@ -24,32 +24,33 @@ namespace AttendanceAPI_v3.Controllers
             _context = context;
         }
 
+
+
         // GET: api/Students
-        [Authorize(Roles = "Instructor, Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
             return await _context.Students.ToListAsync();
         }
 
+
+
         // GET: api/Students/5
         /// <summary>
-        /// get student by id
+        /// get student by username
         /// </summary>
         /// <param name="id"></param>
         /// <returns>a single student object</returns>
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Student>> GetStudent(string id)
+        [HttpGet("{username}")]
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudent(string username)
         {
-            var student = await _context.Students.FindAsync(id);
-
-            if (student == null)
-            {
-                return NotFound();
-            }
-
+            var student = await _context.Students
+            .Where(s => s.StudentUserName == username)
+            .ToListAsync();
             return student;
         }
+        
+
 
         // PUT: api/Students/5
         /// <summary>
@@ -87,6 +88,8 @@ namespace AttendanceAPI_v3.Controllers
             return NoContent();
         }
 
+
+
         // POST: api/Students
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)
@@ -110,6 +113,8 @@ namespace AttendanceAPI_v3.Controllers
 
             return CreatedAtAction("GetStudent", new { id = student.StudentUuid }, student);
         }
+
+
 
         // POST: api/Students/AddBatch
         [HttpPost("AddBatch")]
