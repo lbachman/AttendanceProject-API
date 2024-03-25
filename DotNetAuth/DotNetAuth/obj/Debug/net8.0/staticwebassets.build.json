@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "XXH/fGAbBkH24uCWrAjk1KCaPywe667kbSOaMoV6Vg8=",
+  "Source": "DotNetAuth",
+  "BasePath": "_content/DotNetAuth",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
