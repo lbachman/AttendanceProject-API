@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\14239\\Desktop\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj": {}
+    "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\14239\\Desktop\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj": {
+    "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\14239\\Desktop\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj",
+        "projectUniqueName": "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj",
         "projectName": "DotNetAuth",
-        "projectPath": "C:\\Users\\14239\\Desktop\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj",
-        "packagesPath": "C:\\Users\\14239\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\14239\\Desktop\\DotNetAuth\\DotNetAuth\\obj\\",
+        "projectPath": "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\DotNetAuth\\DotNetAuth\\DotNetAuth.csproj",
+        "packagesPath": "C:\\Users\\lbachman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lbachman\\Desktop\\AttendanceProject-API\\DotNetAuth\\DotNetAuth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\14239\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lbachman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

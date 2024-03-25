@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNetAuth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cc5e8e463209c4374bec4bd2d999e9226d0c96e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotNetAuth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNetAuth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

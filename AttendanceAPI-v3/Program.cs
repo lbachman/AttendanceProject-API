@@ -110,11 +110,8 @@ namespace AttendanceAPI_v3
                     var user = new ApplicationUser();
                     user.UserName = email;
                     user.Email = email;
-
                     await userManager.CreateAsync(user, password);
-
                     await userManager.AddToRoleAsync(user, "Admin");
-
                 }
             }
 #endregion
