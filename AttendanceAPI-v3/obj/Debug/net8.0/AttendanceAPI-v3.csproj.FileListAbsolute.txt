@@ -846,3 +846,6 @@ C:\Users\lbachman\Desktop\AttendanceProject-API\AttendanceAPI-v3\obj\Debug\net8.
 C:\Users\lbachman\Desktop\AttendanceProject-API\AttendanceAPI-v3\obj\Debug\net8.0\AttendanceAPI-v3.pdb
 C:\Users\lbachman\Desktop\AttendanceProject-API\AttendanceAPI-v3\obj\Debug\net8.0\AttendanceAPI-v3.genruntimeconfig.cache
 C:\Users\lbachman\Desktop\AttendanceProject-API\AttendanceAPI-v3\obj\Debug\net8.0\ref\AttendanceAPI-v3.dll
+C:\Users\14239\Desktop\AttendanceProject-API\AttendanceAPI-v3\bin\Debug\net8.0\Scrutor.dll
+C:\Users\14239\Desktop\AttendanceProject-API\AttendanceAPI-v3\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\14239\Desktop\AttendanceProject-API\AttendanceAPI-v3\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

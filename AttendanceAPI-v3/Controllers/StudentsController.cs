@@ -25,7 +25,7 @@ namespace AttendanceAPI_v3.Controllers
         }
 
 
-
+        [Authorize]
         // GET: api/Students
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()

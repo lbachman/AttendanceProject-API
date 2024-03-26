@@ -28,6 +28,7 @@
 - `Add-Migration {add migration name here}` 
 - `Update-Database` applys migrations to instalize a database
 - `Remove-Migration -context {context name}` removes migration
+- `dotnet tool install --global ef` installs entity framework command line package. 
 
 
 ## Database 
@@ -91,3 +92,6 @@ Ensure that this code is in the `appsettings.json` folder
         - add `using Microsoft.AspNetCore.Identity;`
 
 3. run this when switching machines to update the database `Update-Database -Context ApplicationDbContext`
+
+## Testing the authentication features
+- after adding the swagger oauth stuff, login to an account copy and paste the "access token" in the response body, and paste this into the lock thing typing "Bearer" first. 

@@ -7,6 +7,8 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using AttendanceAPI_v3.AuthenticationModels;
 using System.Configuration;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace AttendanceAPI_v3
 {
@@ -19,20 +21,16 @@ namespace AttendanceAPI_v3
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Registers DbContext for  authorization database
+            // Registers DbContext for Authentication database
             var connectionString = builder.Configuration.GetConnectionString("AuthorizationConnection") ?? throw new InvalidOperationException("Connection string 'AuthorizationConnection' not found.");
-
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
-            // Registers DbContext for AttendanceContext
+            // Registers DbContext for Attendance database
             var attendanceConnectionString = builder.Configuration.GetConnectionString("AttendanceConnection") ?? throw new InvalidOperationException("Connection string 'AttendanceConnection' not found.");
-            builder.Services.AddDbContext<AttendanceContext>(options =>
-            {
-                options.UseMySQL(attendanceConnectionString);
-            });
+            builder.Services.AddDbContext<AttendanceContext>(options => options.UseMySQL(attendanceConnectionString));
+            
 
-
-            // Register DbContext for AuthenticationContext
+            // Register DbContext for AuthenticationContext (might delete this)
             builder.Services.AddDbContext<AuthenticationContext>(options =>
             {
                 options.UseSqlServer("AuthenticationConnection");
@@ -47,7 +45,28 @@ namespace AttendanceAPI_v3
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+
+
+
+
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                options.OperationFilter<SecurityRequirementsOperationFilter>();
+                
+            }
+            );
+
+
+
+
+
 
             var app = builder.Build();
 
