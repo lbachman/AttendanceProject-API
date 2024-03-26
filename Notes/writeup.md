@@ -95,3 +95,7 @@ Ensure that this code is in the `appsettings.json` folder
 
 ## Testing the authentication features
 - after adding the swagger oauth stuff, login to an account copy and paste the "access token" in the response body, and paste this into the lock thing typing "Bearer" first. 
+
+## Cookies
+- under the login request set "useCookies" to true
+- open devtools and navigate to 
