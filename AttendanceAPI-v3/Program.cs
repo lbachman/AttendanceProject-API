@@ -47,8 +47,7 @@ namespace AttendanceAPI_v3
             builder.Services.AddEndpointsApiExplorer();
 
 
-
-
+            // adds oauth to the swagger page
             builder.Services.AddSwaggerGen(options =>
             {
                 options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
@@ -62,11 +61,6 @@ namespace AttendanceAPI_v3
                 
             }
             );
-
-
-
-
-
 
             var app = builder.Build();
 
